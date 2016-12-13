@@ -44,11 +44,12 @@ $code="class ".$file." {".$_REQUEST["c_code"]."public static void main(String[] 
 //echo $code;
 	
 	file_put_contents($file.'.java', $code);
-	$com_1='javac '.$file.'.java';
-	$com_2='java '.$file;
-	echo "<br>".$com_1."<br>".$com_2."<br>";
+	
+	$com_1='javac -d F:\PHP_Projects\vista\Codes '.$file.'.java';
+	$com_2='java -classpath F:\PHP_Projects\vista\Codes '.$file;
+	//echo "<br>".$com_1."<br>".$com_2."<br>";
 	$output=shell_exec($com_1." 2>&1");
-	echo $output."<br>";
+	//echo $output."<br>";
 	//$output = shell_exec(escapeshellarg($com_2));
 	//echo realpath('Hello.java');
 	$output = shell_exec($com_2." 2>&1");
