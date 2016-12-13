@@ -4,3 +4,4 @@
 	$PATH = "$JAVA_HOME/bin:".getenv('PATH');
 	putenv("JAVA_HOME=$JAVA_HOME");
 	putenv("PATH=$PATH");
+# correct the director of the server
